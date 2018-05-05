@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Div } from './App.styled'
 import AddRecipe from './components/AddRecipe/AddRecipe'
+import { hot } from 'react-hot-loader'
 
 class App extends Component {
   state = {
@@ -29,7 +30,10 @@ class App extends Component {
   }
 
   handleAddToList = () => {
-
+    let array = this.state.ingredients.split(',')
+    this.setState({
+      recipes: array,
+    })
   }
 
   render() {
@@ -38,7 +42,6 @@ class App extends Component {
         <Div>
           <button onClick={this.handleClick}>Add recipe</button>
           <AddRecipe handleTitle={this.handleTitle} handleIngredients={this.handleIngredients} />
-          {}
           <button onClick = {this.handleAddToList}>Add to you list of recipes</button>
         </Div>
       )
@@ -51,4 +54,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default hot(module)(App);
