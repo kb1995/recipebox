@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import { Div } from './App.styled'
+import AddRecipe from './components/AddRecipe/AddRecipe'
 
 class App extends Component {
   state = {
     title: "",
     ingredients: "",
-    isclicked: false,
+    isClicked: false,
   }
 
   handleClick = () => {
     this.setState({
-      isclicked: true,
+      isClicked: true,
     })
   }
 
@@ -27,17 +28,13 @@ class App extends Component {
   }
 
   render() {
-    if (this.state.isclicked) {
+    if (this.state.isClicked) {
       return (
         <Div>
           <button onClick={this.handleClick}>Add recipe</button>
-          <form>
-            <h3>Recipe Title:</h3>
-            <input onChange={this.handleTitle} type="text"></input>
-
-            <h3>Ingredients:</h3>
-            <input onChange={this.handleIngredients} type="text"></input>
-          </form>
+          <AddRecipe handleTitle={this.handleTitle} handleIngredients={this.handleIngredients} />
+          {console.log(this.state.ingredients)}
+          {console.log(this.state.title)}
         </Div>
       )
     }
