@@ -6,6 +6,7 @@ class App extends Component {
   state = {
     title: "",
     ingredients: "",
+    recipes: [],
     isClicked: false,
   }
 
@@ -27,14 +28,18 @@ class App extends Component {
     })
   }
 
+  handleAddToList = () => {
+
+  }
+
   render() {
     if (this.state.isClicked) {
       return (
         <Div>
           <button onClick={this.handleClick}>Add recipe</button>
           <AddRecipe handleTitle={this.handleTitle} handleIngredients={this.handleIngredients} />
-          {console.log(this.state.ingredients)}
-          {console.log(this.state.title)}
+          {}
+          <button onClick = {this.handleAddToList}>Add to you list of recipes</button>
         </Div>
       )
     }
