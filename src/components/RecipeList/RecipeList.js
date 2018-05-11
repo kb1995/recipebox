@@ -1,17 +1,15 @@
 import React from 'react';
 import RecipeItem from '../RecipeItem/RecipeItem'
+import {Ul} from './RecipeList.styled'
 
 const RecipeList = (props) => {
-    const Recipes = props.recipes.map((item,idx) => {
-        return (<RecipeItem key = {idx} recipe = {item}/>)
+    const Recipes = props.recipes.map((item, idx) => {
+        return (<RecipeItem handleDelete = {props.handleDelete} handleEdit={props.handleEdit} number={idx} key={idx} title={props.title[idx]} recipe={item} />)
     });
     return (
-        <div>
-            <h1>{props.title}</h1>
-            <ul>
-                {Recipes}
-            </ul>
-        </div>
+        <Ul>
+            {Recipes}
+        </Ul>
     )
 }
 

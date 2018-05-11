@@ -6,5 +6,10 @@ injectGlobal`
     body {
         font-family: 'Roboto Mono', monospace;
         font-size: 12px;
+        height: 100%;
     };
+
+    html{
+        height: 100%;
+    }
 `
