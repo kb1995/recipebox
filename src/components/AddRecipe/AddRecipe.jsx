@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
+import {Input, Label} from './AddRecipe.styled'
 
 class AddRecipe extends Component {
     render() {
         return (
+            <div>
                 <form>
-                    <h3>Recipe Title:</h3>
-                    <input onKeyPress = {this.props.handleEnter} onChange={this.props.handleTitle} value = {this.props.title} type="text"></input>
-
-                    <h3>Ingredients (separate by comma):</h3>
-                    <input onKeyPress = {this.props.handleEnter} onChange={this.props.handleIngredients} value = {this.props.ingredients} type="text"></input>
+                    <Label>Recipe Title:</Label>
+                    <Input onKeyPress={this.props.handleEnter} onChange={this.props.handleTitle} value={this.props.title} type="text"></Input>
                 </form>
+                <form>
+                    <Label>Ingredients (separate by comma):</Label>
+                    <Input onKeyPress={this.props.handleEnter} onChange={this.props.handleIngredients} value={this.props.ingredients} type="text"></Input>
+                </form>
+            </div>
+
         );
     }
 }

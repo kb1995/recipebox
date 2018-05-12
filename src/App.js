@@ -3,6 +3,7 @@ import { hot } from 'react-hot-loader'
 import AddRecipe from './components/AddRecipe/AddRecipe'
 import RecipeList from './components/RecipeList/RecipeList'
 import { Flex, Div1, Div2 } from './theme/grid'
+import {Heading, AddButton} from './App.styled'
 
 
 
@@ -50,29 +51,30 @@ class App extends Component {
   handleEnter = (e) => {
     if (e.which === 13) {
       let array = this.state.ingredients.split(',').filter(function (e) { return e });
-      this.state.recipeList.title.push(this.state.title);
+      let newTitle = this.state.title.charAt(0).toUpperCase() + this.state.title.slice(1);
+      this.state.recipeList.title.push(newTitle);
       this.state.recipeList.ingredients.push(array);
-
+  
       this.setState({
         title: "",
         ingredients: "",
         recipes: array,
-        finalTitle: this.state.title,
+        finalTitle: newTitle,
       })
     }
-
   }
 
   handleAddToList = () => {
     let array = this.state.ingredients.split(',').filter(function (e) { return e });
-    this.state.recipeList.title.push(this.state.title);
+    let newTitle = this.state.title.charAt(0).toUpperCase() + this.state.title.slice(1);
+    this.state.recipeList.title.push(newTitle);
     this.state.recipeList.ingredients.push(array);
 
     this.setState({
       title: "",
       ingredients: "",
       recipes: array,
-      finalTitle: this.state.title,
+      finalTitle: newTitle,
     })
   }
 
@@ -85,7 +87,7 @@ class App extends Component {
     })
   }
 
-  handleEdit = (idx, recipes,text) => {
+  handleEdit = (idx, recipes, text) => {
 
     recipes[idx] = text;
 
@@ -100,20 +102,22 @@ class App extends Component {
 
   render() {
     return (
-      <Flex>
-        <Div1 >
-          <AddRecipe handleEnter={this.handleEnter} title={this.state.title} ingredients={this.state.ingredients} handleTitle={this.handleTitle} handleIngredients={this.handleIngredients} />
-          <button onClick={this.handleAddToList}>Add to you list of recipes</button>
-        </Div1>
-        <Div2>
-          <RecipeList
-            handleDelete={this.handleDelete.bind(this)}
-            handleEdit={this.handleEdit.bind(this)}
-            title={this.state.recipeList.title}
-            recipes={this.state.recipeList.ingredients} />
-        </Div2>
-      </Flex>
-
+      <div>
+        <Heading>A place where you can store the ingredients your tasty recipes!</Heading>
+        <Flex>
+          <Div1 >
+            <AddRecipe handleEnter={this.handleEnter} title={this.state.title} ingredients={this.state.ingredients} handleTitle={this.handleTitle} handleIngredients={this.handleIngredients} />
+            <AddButton onClick={this.handleAddToList}>Add a recipe</AddButton>
+          </Div1>
+          <Div2>
+            <RecipeList
+              handleDelete={this.handleDelete.bind(this)}
+              handleEdit={this.handleEdit.bind(this)}
+              title={this.state.recipeList.title}
+              recipes={this.state.recipeList.ingredients} />
+          </Div2>
+        </Flex>
+      </div>
     );
   }
 }
