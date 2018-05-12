@@ -108,6 +108,7 @@ class App extends Component {
           <Div1 >
             <AddRecipe recipeList = {this.state.recipeList} handleAddToList = {this.handleAddToList} handleEnter={this.handleEnter} title={this.state.title} ingredients={this.state.ingredients} handleTitle={this.handleTitle} handleIngredients={this.handleIngredients} />
           </Div1>
+          
           <Div2>
             <RecipeList
               handleDelete={this.handleDelete.bind(this)}

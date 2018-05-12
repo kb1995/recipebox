@@ -32,10 +32,11 @@ export const AddButton = styled.button`
     background-color: #333;
     color: white;
     padding: 10px 15px;
-    border: none;
     margin: 10px;
+    border: 1px solid #333;
     cursor: pointer;
-    border: 1px solid white;
+    font-weight: 500;
+    font-size: 16px;
 
     transition: 0.2s;
     transition-timing-function: ease-in-out;
@@ -49,12 +50,13 @@ export const AddButton = styled.button`
 
 export const Centered = styled.div`
     ${media.desktop`
+        background-color: #ff9999;
+        padding: 80px 120px;
+        border-radius: 2%;
+
         position: fixed;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        background-color: #ff9999;
-        padding: 80px 120px;
-        border-radius: 2%;
     `}
 `

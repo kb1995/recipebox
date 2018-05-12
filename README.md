@@ -1,5 +1,9 @@
-This is a project from free code camp.
+This is a project from Free Code Camp.
 
-You canadd, edit and save your recipes here.
+You can add, edit and save (on Local Storage) your recipes here.
 
-I have made it so it is saved on the local storage. This means that the recipes will be saved even after you close your browser!
+##
+Things still to be added:
+
+- Fix the issue when there are two recipes with the same name
+##
