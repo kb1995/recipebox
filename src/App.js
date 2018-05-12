@@ -106,8 +106,7 @@ class App extends Component {
         <Heading>A place where you can store the ingredients for your tasty recipes!</Heading>
         <Flex>
           <Div1 >
-            <AddRecipe handleEnter={this.handleEnter} title={this.state.title} ingredients={this.state.ingredients} handleTitle={this.handleTitle} handleIngredients={this.handleIngredients} />
-            <AddButton onClick={this.handleAddToList}>Add a recipe</AddButton>
+            <AddRecipe recipeList = {this.state.recipeList} handleAddToList = {this.handleAddToList} handleEnter={this.handleEnter} title={this.state.title} ingredients={this.state.ingredients} handleTitle={this.handleTitle} handleIngredients={this.handleIngredients} />
           </Div1>
           <Div2>
             <RecipeList

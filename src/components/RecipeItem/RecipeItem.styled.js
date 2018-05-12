@@ -11,7 +11,7 @@ export const Div = styled.div`
     margin: 10px;
     background-color: #ff9999;
     padding: 5px 0;
-
+    
     opacity: 0.7;
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
@@ -23,7 +23,7 @@ export const Div = styled.div`
 `
 
 export const Delete = styled.button`
-   border: 2px solid red;
+   border: 1px solid #333;
    background-color: white;
    padding: 5px;
    margin: 5px;
