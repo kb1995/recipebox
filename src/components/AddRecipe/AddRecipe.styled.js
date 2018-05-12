@@ -2,10 +2,12 @@ import styled from 'styled-components'
 
 export const Input = styled.input`
     width: 100%;
-
+    text-align: center;
+    font-size: 18px;
+    color: #333;
 
     &[type=text]:focus{
-;
+
 
     }
 
@@ -19,5 +21,10 @@ export const Input = styled.input`
 `
 
 export const Label = styled.label`
-    margin-bottom: 10px;
+    display:inline-block;
+    margin: 10px 0;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
 `

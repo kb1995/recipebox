@@ -1,8 +1,25 @@
 import styled from 'styled-components'
 
 export const H2 = styled.h2`
+    font-size: 22px;
     margin: 5px;
     cursor: pointer;
+`
+
+export const Div = styled.div`
+    text-align: center;
+    margin: 10px;
+    background-color: #ff9999;
+    padding: 5px 0;
+
+    opacity: 0.7;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+
+    &:hover{
+        opacity: 1;
+        padding: 15px 0;
+    }
 `
 
 export const Delete = styled.button`
@@ -22,5 +39,4 @@ export const Delete = styled.button`
    } 
 
    &:focus {outline:0;}
-
 `

@@ -1,25 +1,14 @@
 import styled from 'styled-components'
+import media from './media'
 
 export const Flex = styled.div`
+
+    ${media.desktop`
     display: flex;
-    min-height: 500px;
+    grid-gap: 10px;
     justify-content: center;
+    `}
 `
 
-export const Div = styled.div`
-    text-align: center;
-    margin: 10px;
-    background-color: #ff9999;
-`
 
-export const Div1 = styled.div`
-    text-align: center;
-    margin: 10px;
-    flex: 1;
-`
 
-export const Div2 = styled.div`
-    text-align: center;
-    margin: 10px;
-    flex: 2;
-`

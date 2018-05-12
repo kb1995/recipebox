@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Div } from '../../theme/grid'
-import { H2, Delete} from './RecipeItem.styled'
+import { H2, Div, Delete} from './RecipeItem.styled'
 import { hot } from 'react-hot-loader'
 import IngredientItem from '../IngredientItem/IngredientItem'
 
@@ -30,8 +29,8 @@ class RecipeItem extends Component {
             )
         }
         return (
-            <Div>
-                <H2 onClick={this.handleShow}>{this.props.title}</H2>
+            <Div onClick={this.handleShow}>
+                <H2>{this.props.title}</H2>
             </Div>
         );
     }

@@ -9,5 +9,11 @@ export const Input = styled.input`
     padding: 10px 0;
     text-align: center;
 
-    &:focus {outline:0;}
+    opacity: 0.7;
+    transition-duration: 0.3s;
+
+    &:focus {
+        outline:0; 
+        opacity: 1;
+    }
 `

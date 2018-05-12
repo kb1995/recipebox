@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { hot } from 'react-hot-loader'
 import AddRecipe from './components/AddRecipe/AddRecipe'
 import RecipeList from './components/RecipeList/RecipeList'
-import { Flex, Div1, Div2 } from './theme/grid'
-import {Heading, AddButton} from './App.styled'
+import { Flex  } from './theme/grid'
+import {Heading, AddButton, Div1, Div2} from './App.styled'
 
 
 
@@ -103,7 +103,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Heading>A place where you can store the ingredients your tasty recipes!</Heading>
+        <Heading>A place where you can store the ingredients for your tasty recipes!</Heading>
         <Flex>
           <Div1 >
             <AddRecipe handleEnter={this.handleEnter} title={this.state.title} ingredients={this.state.ingredients} handleTitle={this.handleTitle} handleIngredients={this.handleIngredients} />
