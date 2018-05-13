@@ -78,11 +78,11 @@ class App extends Component {
     })
   }
 
-  handleDelete = (idx) => {
+  handleDelete = (index) => {
     this.setState({
       recipeList: {
-        title: this.state.recipeList.title.filter(item => { return item !== this.state.recipeList.title[idx] }),
-        ingredients: this.state.recipeList.ingredients.filter(item => { return item !== this.state.recipeList.ingredients[idx] })
+        title: this.state.recipeList.title.filter((item, idx) => { return idx !== index }),
+        ingredients: this.state.recipeList.ingredients.filter((item, idx) => { return idx !== index })
       }
     })
   }
